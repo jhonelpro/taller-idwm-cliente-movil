@@ -1,0 +1,8 @@
+{
+  "name": "Taller-IDWM-ClienteMovil",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "f6acc415"
+}
