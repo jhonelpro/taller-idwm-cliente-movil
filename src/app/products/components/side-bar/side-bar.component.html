@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Filtros de Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Tipo de producto</ion-label>
+    <ion-select (ionChange)="onFilterChange($event, 'productType')">
+      <ion-select-option value="">...</ion-select-option>
+      <ion-select-option value="Poleras">Poleras</ion-select-option>
+      <ion-select-option value="Gorros">Gorros</ion-select-option>
+      <ion-select-option value="Juguetería">Juguetería</ion-select-option>
+      <ion-select-option value="Alimentación">Alimentación</ion-select-option>
+      <ion-select-option value="Libros">Libros</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Ordenar por precio</ion-label>
+    <ion-select (ionChange)="onFilterChange($event, 'sortByPrice')">
+      <ion-select-option value="false">...</ion-select-option>
+      <ion-select-option value="false">Ascendente</ion-select-option>
+      <ion-select-option value="true">Descendente</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>
