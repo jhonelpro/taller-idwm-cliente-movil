@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-side-bar></app-side-bar>
+
+  <div *ngIf="productsList.length > 0">
+    <div *ngFor="let product of productsList">
+      <app-product-card 
+        [product]="product" 
+        (productSelected)="onProductSelected($event)">
+      </app-product-card> 
+    </div>
+  </div>
+
+  <div *ngIf="productsList.length === 0">
+    <ion-text color="medium">
+      <p>No hay productos disponibles.</p>
+    </ion-text>
+  </div>
+</ion-content>
