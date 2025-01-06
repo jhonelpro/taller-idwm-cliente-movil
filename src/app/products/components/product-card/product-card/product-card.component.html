@@ -1,0 +1,41 @@
+<ion-card class="relative">
+
+  <div *ngIf="showMessage" 
+       class="notification absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10 rounded-lg">
+    <ion-label color="success" class="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg">
+      ¡Producto agregado al carrito!
+    </ion-label>
+  </div>
+
+  
+  <img
+    [src]="product.imageUrl ? product.imageUrl : 'https://res.cloudinary.com/dd0ljsgtp/image/upload/v1728516121/cld-sample-4.jpg'"
+    [alt]="product.name"
+    class="rounded-t-lg"
+  />
+
+  <ion-card-header>
+   
+    <ion-card-title class="text-center">
+      {{ product.name }}
+    </ion-card-title>
+
+    
+    <p class="ion-text-center text-gray-700 dark:text-gray-400">
+      {{ product.productType.name }}
+    </p>
+
+    
+    <p class="ion-text-center text-lg font-semibold text-gray-900 dark:text-white">
+      ${{ product.price }}
+    </p>
+  </ion-card-header>
+
+  
+  <ion-card-content>
+    <ion-button expand="full" color="primary" click="onProductSelected(product)">
+      Agregar al carrito
+    </ion-button>
+  </ion-card-content>
+
+</ion-card>
